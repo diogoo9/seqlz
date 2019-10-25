@@ -1,6 +1,6 @@
-const Sequelize = require('sequelize');
-const User = require('../app/models/User');
-const databaseConfig = require('../config/database');
+import Sequelize from "sequelize";
+import User from "../app/models/User";
+import databaseConfig from "../config/database";
 
 const models = [User];
 
@@ -13,7 +13,7 @@ class Database{
         //conect and load models
         this.connection = new Sequelize(databaseConfig);
 
-        models.map(model=> model.init(this.connectio));
+        models.map(model=> model.init(this.connection));
         
     }
 }

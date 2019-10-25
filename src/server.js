@@ -5,6 +5,6 @@ const routes = new  Router();
 const app = express();
 app.use(routes);
 */
-const app = require('./app');
+import app from "./app";
 
 app.listen(3333);
